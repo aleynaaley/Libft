@@ -48,3 +48,12 @@ int	ft_atoi(char *str)
 	res *= pn;
 	return (res);
 }
+
+
+
+//man de ki haliyle yaz
+
+int	atoi(const char *str){
+
+
+}
