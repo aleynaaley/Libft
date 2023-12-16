@@ -13,12 +13,11 @@
 
 
 char *ft_strdup(const char *s1){
-     size_t len = 0;
-    while (s1[len] != '\0') {
-        len++;
-    }
+    size_t len;
+    char    *copy;
     
-    char *copy = (char *)malloc(len + 1);
+    len = ft_strlen(s1);
+    copy = (char *)malloc(len + 1);
     if (copy == NULL) {
         return NULL; // Bellek ayrılamazsa NULL döndür.
     }
