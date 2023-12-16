@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 //verilen bir karakteri eğer küçük harf ise büyük harfe dönüştürür.
 // Eğer karakter zaten büyük harf veya harf değilse, karakteri olduğu gibi bırakır
 
@@ -21,4 +22,3 @@ int	ft_toupper(int c)
         return c - 32;
     return c;
 }
-
