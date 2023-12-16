@@ -14,16 +14,20 @@
 //dst hedef bellek bloğunu, src kaynak bellek bloğunu ve len de kopyalanacak bayt sayısını belirtir
 // memmove fonksiyonu verileri önce bir ara belleğe kopyalar, ardından bu bellekten hedefe kopyalar
 void    *ft_memmove(void *dst, const void *src, size_t len){
-    char *d = dst;
-    const char *s = src;   //src’nin bir sabit olduğunu belirtmektir. const anahtar kelimesi, bir değişkenin değerinin değiştirilemeyeceğini belirtir
+    char *d;
+    char *s;
+
+    d = dst;
+    s = src;   //src’nin bir sabit olduğunu belirtmektir. const anahtar kelimesi, bir değişkenin değerinin değiştirilemeyeceğini belirtir
     if (src < dst && dst < src + len) {
-        /* Have to copy backwards */
         s += len;
         d += len;
         while (len--) {
             *--d = *--s;
         }
-    } else {
+    }
+    else
+    {
         while (len--) {
             *d++ = *s++;
         }
