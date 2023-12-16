@@ -12,20 +12,16 @@
 //calloc fonksiyonu, belirli bir bellek alanını tahsis eder ve bu alanı sıfır  değerleriyle doldurur
 //Eğer bellek ayırma işlemi başarılı olursa, tahsis edilen belleğin başlangıç adresini geri döndürür
 //Eğer bellek ayırma işlemi başarısız olursa, NULL döndürür
+void    *ft_calloc(size_t count, size_t size)
+{
+    size_t total_size;
+    void *ptr;
 
-void    *ft_calloc(size_t count, size_t size){
-  size_t total_size = count * size;
-    void *ptr = malloc(total_size);
-
+    total_size = count * size;
+    ptr = malloc(total_size);
     if (!ptr) {
         return NULL;
     }
-
-    char *char_ptr = ptr;
-    //burada bzero kullanılabilir (ft_bzero(ptr,total_size))
-    while (total_size-- > 0) {
-        *char_ptr++ = 0;
-    }
-
+    ft_bzero(ptr,total_size);
     return ptr;
-}
+} 
