@@ -1,3 +1,9 @@
+#bir programın derlenme sürecini otomatikleştirmek için kullanılır1. Makefile’lar,
+#bir projenin farklı parçalarının nasıl ve ne zaman derleneceğini belirler
+#
+
+
+
 # Proje adı
 NAME = libft.a
 
@@ -6,7 +12,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Kaynak dosyaları ve nesne dosyaları
-SRCS = main.c ft_toupper.c ft_tolower.c ft_strrchr.c
+SRCS = main.c ft_toupper.c ft_tolower.c ft_strrchr.c ft_memset.c
 OBJS = $(SRCS:.c=.o)
 
 # Bonus dosyaları ve bonus nesne dosyaları
@@ -17,7 +23,7 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-# Derleme kuralları
+# Derleme kuralları. libft kütüphanesini derler
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJS)
@@ -41,42 +47,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
-
-
-
-
-
-
-
-
-# Proje adı
-NAME = libft.a
-
-# Derleme aracı ve bayrakları
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-
-# Kaynak dosyaları ve nesne dosyaları
-SRCS = ft_function1.c ft_function2.c ft_function3.c
-OBJS = $(SRCS:.c=.o)
-
-# Derleme kuralları
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-# Temizleme kuralları
-clean:
-	rm -f $(OBJS)
-
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all
-
-# Nesne dosyalarının derlenmesi
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-.PHONY: all clean fclean re

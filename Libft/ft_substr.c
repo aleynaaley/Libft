@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 23:39:18 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/16 22:35:59 by alerkul          ###   ########.fr       */
+/*   Created: 2023/12/17 00:37:58 by alerkul           #+#    #+#             */
+/*   Updated: 2023/12/17 03:42:18 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//belirtilen boyutta (n) belleği sıfırlar. Fonksiyon, void *s parametresi ile belirtilen bellek alanını alır
-//ve her bir baytı sıfır (0) ile doldurur.
 
-void   ft_bzero(void *s, size_t n)
+#include "libft.h"
+char    *ft_substr(char const   *s, unsigned int    start, size_t   len)
 {
-  char *ptr; 
-  
-  p = s;
-  while (n-- > 0)
-  {
-    *ptr++ = 0;
-  }
+    char *sub;
+    size_t i;
+
+i = 0;
+    if(!s || !(sub = (char *)malloc(sizeof(char) * (len + 1))))
+        return NULL;
+    while(i < len && s[start + i])
+    {
+        sub[i] = s[start + i];
+        i++;
+    }
+    sub[i] = '\0';
+    return sub;
 }

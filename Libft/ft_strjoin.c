@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 08:40:14 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/17 00:15:46 by alerkul          ###   ########.fr       */
+/*   Created: 2023/12/17 00:43:11 by alerkul           #+#    #+#             */
+/*   Updated: 2023/12/17 03:39:45 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Eğer bellek ayırma işlemi başarılı olursa, tahsis edilen belleğin başlangıç adresini geri döndürür
-//Eğer bellek ayırma işlemi başarısız olursa, NULL döndürür
 
-void    *ft_calloc(size_t count, size_t size)
+#include "libft.h"
+char    *ft_strjoin(char cons *s1, char const *s2)
 {
-    size_t total_size;
-    void *ptr;
+    int i;
+    int j;
+    char *str;
 
-    total_size = count * size;
-    ptr = malloc(total_size);
-    if (!ptr) {
+    i = 0;
+    j = 0;
+    str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+    if(str == NULL)
         return NULL;
+    while(s1[i] != NULL) 
+    {
+        str[i] = s1[i];
+        i++;
     }
-    ft_bzero(ptr,total_size);
-    return ptr;
-} 
+    while(s2[j] != NULL) 
+    {
+        str[i + j] = s2[j];
+        j++;
+    }
+    str[i + j] = NULL;
+    return(str);
+}

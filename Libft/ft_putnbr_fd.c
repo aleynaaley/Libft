@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 23:39:18 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/16 22:35:59 by alerkul          ###   ########.fr       */
+/*   Created: 2023/12/17 09:42:06 by alerkul           #+#    #+#             */
+/*   Updated: 2023/12/17 11:38:29 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//belirtilen boyutta (n) belleği sıfırlar. Fonksiyon, void *s parametresi ile belirtilen bellek alanını alır
-//ve her bir baytı sıfır (0) ile doldurur.
+#include "libft.h"
 
-void   ft_bzero(void *s, size_t n)
+void ft_putnbr_fd(int n, int fd)
 {
-  char *ptr; 
-  
-  p = s;
-  while (n-- > 0)
-  {
-    *ptr++ = 0;
-  }
+    long nbr;
+
+    nbr = n;
+    if(nbr < 0)
+    {
+        write(fd, "-", 1);
+        nbr *= -1;
+    }
+    if(nb > 9)
+    {
+        ft_putnbr_fd(nbr / 10 , fd);
+        ft_putchar_fd((nb % 10) + '0' ,fd);
+    }
+    else
+        ft_putchar_fd(nbr + '0',fd);
 }

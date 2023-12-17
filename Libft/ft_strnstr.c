@@ -12,6 +12,7 @@
 //bir karakter dizisi içinde (haystack), başka bir karakter dizisinin (needle) ilk 
 //oluşumunu arar, ancak belirli bir uzunluk (len) ile sınırlıdır.çinde bulunursa, needle’ın ilk karakterinin haystack içindeki 
 //adresini döndürür. Eğer bulunamazsa NULL döndürür 
+//size_t değişken türü unsigned tam sayı tipi yani nesnelerin boyutunu byte cinsinden ifade eder ve negatif değer almaz.döngülerde sıklıkla kullanılır. 
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

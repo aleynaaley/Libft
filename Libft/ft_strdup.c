@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alerkul <alerkul@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:48:32 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/11 08:48:33 by alerkul          ###   ########.fr       */
+/*   Updated: 2023/12/16 22:29:15 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//bir karakter dizisinin (const char *s1) kopyasını oluşturur ve bu kopyanın adresini döndürür. Kopya için gerekli bellek, dinamik olarak malloc kullanılarak ayrılır
 
 
-char *strdup(const char *s1){
-     size_t len = 0;
-    while (s1[len] != '\0') {
-        len++;
-    }
+
+char *ft_strdup(const char *s1){
+    size_t len;
+    char    *copy;
     
-    char *copy = (char *)malloc(len + 1);
+    len = ft_strlen(s1);
+    copy = (char *)malloc(len + 1);
     if (copy == NULL) {
         return NULL; // Bellek ayrılamazsa NULL döndür.
     }

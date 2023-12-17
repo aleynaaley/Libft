@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 23:39:18 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/16 22:35:59 by alerkul          ###   ########.fr       */
+/*   Created: 2023/12/17 11:16:21 by alerkul           #+#    #+#             */
+/*   Updated: 2023/12/17 11:38:47 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//belirtilen boyutta (n) belleği sıfırlar. Fonksiyon, void *s parametresi ile belirtilen bellek alanını alır
-//ve her bir baytı sıfır (0) ile doldurur.
+#include "libft.h"
 
-void   ft_bzero(void *s, size_t n)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-  char *ptr; 
-  
-  p = s;
-  while (n-- > 0)
-  {
-    *ptr++ = 0;
-  }
+    
 }
+

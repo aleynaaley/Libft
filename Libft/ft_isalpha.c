@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alerkul <alerkul@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 14:24:45 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/08 14:24:48 by alerkul          ###   ########.fr       */
+/*   Updated: 2023/12/17 00:17:13 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//alfabede A-Z, a-z arasında yer alıp almadığını kontrol eden fonksiyon.
+
 
 #include "libft.h"
-
-int	ft_isalpha(char *str)
+ 
+int	ft_isalpha(int	c)
 {
-	return((str >= 'A'&& str <= 'Z' ) || (str >='a' && str <= 'z'));
-}
-
-//man de bu sekilde istiyor duzelt
-int	isalpha(int c){
-
+	if((str >= 'A'&& str <= 'Z' ) || (str >='a' && str <= 'z'));
+		return 1;
+	else
+		return 0;
 }

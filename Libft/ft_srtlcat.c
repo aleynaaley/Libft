@@ -9,53 +9,25 @@
 /*   Updated: 2023/12/08 14:19:57 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//kontrol edilmedi
+
+//bir kaynak dizesini (src) bir hedef dizesine (dst) ekler
 
 #include "libft.h"
 
-/*
-unsigned int	ft_strlen(char *str)
-{
-	int	x;
+size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize){
+    size_t srclen = strlen(src);
+    size_t dstlen = strlen(dst);
+    size_t i = 0;
 
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}
-	return (x);
-}
+    if (dstlen < dstsize - 1 && dstsize > 0) {
+        while (src[i] != '\0' && dstlen + i < dstsize - 1) {
+            dst[dstlen + i] = src[i];
+            i++;
+        }
+        dst[dstlen + i] = '\0';
+    }
+    if (dstlen >= dstsize)
+        dstlen = dstsize - 1;
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	a;
-	unsigned int	b;
-	unsigned int	len;
-	unsigned int	len2;
-
-	a = 0;
-	b = 0;
-	while (dest[a])
-	{
-		a++;
-	}
-	len = a;
-	len2 = ft_strlen(src);
-	if (size == 0 || len >= size)
-		return (len2 + size);
-	while (src[b] != '\0' && b < size - len - 1)
-	{
-		dest[a] = src[b];
-		b++;
-		a++;
-	}
-	dest[a] = '\0';
-	return (len + len2);
-}
-*/
-
-
-size_t	strlcat(char * restrict dst, const char * restrict src, size_t dstsize){
-
-
+    return (dstlen + srclen);
 }

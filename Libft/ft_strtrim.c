@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alerkul <alerkul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 23:39:18 by alerkul           #+#    #+#             */
-/*   Updated: 2023/12/16 22:35:59 by alerkul          ###   ########.fr       */
+/*   Created: 2023/12/17 03:58:29 by alerkul           #+#    #+#             */
+/*   Updated: 2023/12/17 04:08:49 by alerkul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//belirtilen boyutta (n) belleği sıfırlar. Fonksiyon, void *s parametresi ile belirtilen bellek alanını alır
-//ve her bir baytı sıfır (0) ile doldurur.
+#include "libft.h"
 
-void   ft_bzero(void *s, size_t n)
+char *ft_strtrim(char const *s1, char const *set)
 {
-  char *ptr; 
-  
-  p = s;
-  while (n-- > 0)
-  {
-    *ptr++ = 0;
-  }
+    size_t i;
+
+    if(s1 == NULL && set == NULL)
+        return 0;
+    while(*s1 != 0 && ft_strchr(*s1, set))
+    {
+        s1++;
+    }
+    i = ft_strlen(s1);
+    while(i > 0 && ft_strchr(s1[i],set))
+        i--;
+    return(ft_substr(s1, 0, i +1));
 }
