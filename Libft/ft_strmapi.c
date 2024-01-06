@@ -31,13 +31,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-cahr aley(unsigned int index,cahr a){
+char aley(unsigned int index,char a){
     a += 1;
     return (a); 
 }
 
  int main(){
-    cahr *result;
+    char *result;
     char v[]= "aley";
     result = ft_strmapi(v,aley);
     printf("%s", result);
