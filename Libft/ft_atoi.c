@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 
 /*
 int	main(void){
-		char a[] = "       ++--++-aley7840";
+	char a[] = "    --++-+-+13728aöc3";
 	char b[] = "   123";
 	char c[] = "   -987";
 	char d[] = "   2147483647";  // INT_MAX
