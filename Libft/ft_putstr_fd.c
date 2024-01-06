@@ -22,3 +22,8 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
+
+int main () {
+    int fd = open("a.txt",O_RDWR | O_CREAT , 0777);
+    ft_putstr_fd('a',fd);
+}
