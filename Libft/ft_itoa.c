@@ -21,13 +21,6 @@ static long	ft_bsm(int n)
 	return (size++);
 }
 
-static int	ft_sign(int n)
-{
-	if (n < 0)
-		return (1);
-	return (0);
-}
-
 char	*ft_itoa(int n)
 {
 	long	n_long;
@@ -49,7 +42,7 @@ char	*ft_itoa(int n)
 		length--;
 		n_long /= 10;
 	}
-	if (ft_sign(n))
+	if (n < 0)
 		fresh[0] = '-';
 	return (fresh);
 }
