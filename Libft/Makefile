@@ -2,7 +2,7 @@
 NAME = libfft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-RM				= rm -rf
+RM = rm -rf
 
 SRCS = ft_isdigit.c\
 		ft_isalpha.c\
