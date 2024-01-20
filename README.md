@@ -1,4 +1,4 @@
-# LİBFT KÜTÜPHANESİ
+#Libft Kütüphanesi
 
 Bu proje, C dilinde yazılmış kendi özel kütüphanemi içermektedir. Kütüphane, çeşitli işlevleri içeren `libft` adlı bir başlık dosyası ile birlikte gelir.Derleme işlemini otomatikleştirmek için bir de MAKEFİLE dosyası içerir.
 
