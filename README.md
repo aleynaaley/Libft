@@ -46,4 +46,7 @@ Proje kütüphanesi içinde şu ana fonksiyonlar bulunmaktadır:
 - `ft_itoa`: Bir int değeri stringe döüştürür.
 - `ft_substr`:Bir stringde belirtilen konumdan itibaren belirtilen uzunluktaki bir alt dizeyi ayıklar ve bu alt diziyi yeni bir bellek bloğuna kopyalar.
 - `ft_strtrim`:Verilen bir stringden belirtilen karakter kümesine ait karakterleri baştan ve sondan temizleyerek yeni bir karakter dizisi oluşturur.
-
+- `ft_strnstr`:
+- `ft_split`:
+- `ft_str`:
+- `ft_strtrim`:
