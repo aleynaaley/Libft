@@ -48,5 +48,11 @@ Proje kütüphanesi içinde şu ana fonksiyonlar bulunmaktadır:
 - `ft_strtrim`:Verilen bir stringden belirtilen karakter kümesine ait karakterleri baştan ve sondan temizleyerek yeni bir karakter dizisi oluşturur.
 - `ft_strnstr`:
 - `ft_split`:
-- `ft_str`:
+- `ft_strjoin`:
+- `ft_strmapi`:
+- `ft_strncmp`:
+- `ft_striteri`:
+- `ft_memset`:
+- `ft_memcpy`:
 - `ft_strtrim`:
+- `ft_strtrim`
