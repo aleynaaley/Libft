@@ -54,5 +54,5 @@ Proje kütüphanesi içinde şu ana fonksiyonlar bulunmaktadır:
 - `ft_striteri`:
 - `ft_memset`:
 - `ft_memcpy`:
-- `ft_strtrim`:
-- `ft_strtrim`
+- `ft_memmove`:
+- `ft_putchr_fd`:
