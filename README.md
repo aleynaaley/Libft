@@ -55,4 +55,5 @@ Proje kütüphanesi içinde şu ana fonksiyonlar bulunmaktadır:
 - `ft_memset`:
 - `ft_memcpy`:
 - `ft_memmove`:
-- `ft_putchr_fd`:
+- `ft_putchar_fd`:
+- `ft_putstr_fd`:
